@@ -1,6 +1,8 @@
 spring:
   jpa:
     show_sql: true
+    hiberante:
+      ddl-auto: create
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
@@ -14,3 +16,8 @@ spring:
     password:
       hikari:
         jdbc-url: jdbc:h2:mem://localhost/~/testdb;MODE=MYSQL
+
+server:
+  error:
+    include-exception: true
+    include-stacktrace: always
